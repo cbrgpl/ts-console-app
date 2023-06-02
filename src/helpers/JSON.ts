@@ -1,11 +1,12 @@
-import { ParseError } from './../errors/ParseError.js'
-import { IJSONObject } from './../types/IJsonObject.js'
+import { ParseError } from '../errors/ParseError.js'
+import { IJSONObject } from '../types/utils.js'
 
 const parse = ( json: string ): IJSONObject => {
   try {
     return JSON.parse( json )
   } catch ( err ) {
-    throw new ParseError( json, 'JSON', err.message )
+    const error = err as Error
+    throw new ParseError( json, 'JSON', error.message ?? '' )
   }
 }
 

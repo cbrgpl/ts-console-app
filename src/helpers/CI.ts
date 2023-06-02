@@ -17,7 +17,8 @@ export const CI = new class CI {
   }
 
   private timestampLog( text: string ): void {
-    console.log( `${ timestamp.utc( 'HH:mm:ss:ms' ) } ${ text }` )
+    // eslint-disable-next-line import/no-named-as-default-member
+    console.log( `${ timestamp( 'HH:mm:ss:ms' ) } ${ text }` )
   }
 
   private log( text?: string ): void {

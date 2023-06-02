@@ -15,10 +15,11 @@ import { JSON } from './helpers/JSON.js'
     CI.finish( 'Finish' )
     process.exit( 0 )
   } catch ( err ) {
+    const error = err as Error
     if ( err instanceof ALogableError ) {
       CI.error( err )
     } else {
-      CI.error( new InternalError( err.message, err.stack ) )
+      CI.error( new InternalError( error.message, error.stack ?? '' ) )
     }
 
     process.exit( 1 )

@@ -1,16 +1,28 @@
 {
   "compilerOptions": {
+    "allowJs": true,
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noImplicitThis": true,
     "esModuleInterop": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "lib": [
-      "ES2021.Promise",
-    ],
-    "allowSyntheticDefaultImports": true,
-  }
+    "strictPropertyInitialization": false,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "include": [ 
+  "src/**/*.ts", 
+  "src/**/*.d.ts", 
+  "src/**/*.tsx", 
+  "src/**/*.vue", 
+  "src/**/*.js"
+  ]
 }

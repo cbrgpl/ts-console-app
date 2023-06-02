@@ -1,7 +1,7 @@
-import { ValidationError } from './../errors/ValidationError.js'
+import { ValidationError } from '../errors/ValidationError'
 
 import Ajv2020, { ErrorObject } from 'ajv/dist/2020.js'
-const Ajv = Ajv2020 as unknown as typeof Ajv2020.default
+const Ajv = Ajv2020 as unknown as typeof Ajv2020
 
 const ajv = new Ajv()
 
